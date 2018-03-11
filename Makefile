@@ -11,6 +11,8 @@ SRC	=	src/my_strlen.S			\
 		src/my_memset.S			\
 		src/my_memcpy.S			\
 		src/my_strcmp.S			\
+		src/my_memmove.S		\
+		src/my_strncmp.S		\
 		src/my_strchr.S
 
 OBJ	=	$(SRC:.S=.o)
