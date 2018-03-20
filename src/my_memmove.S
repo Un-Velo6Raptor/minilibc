@@ -4,15 +4,34 @@
 memmove:
 	xor rcx, rcx
 
-loop:
+	cmp rsi, rdi
+	jbe start_end
+		
+loop_begin:
 	cmp rcx, rdx
 	je end_loop
-
-	mov r8b, [rsi + rcx] 	; tmp value contains the char to set
-	mov [rdi + rcx], r8b	; set the char stocked before
 	
+	mov r8b, [rsi + rcx]
+	mov [rdi + rcx], r8b
+		
 	inc rcx
-	jmp loop
+	jmp loop_begin
+	
+start_end:
+	mov rcx, rdx
+
+loop_end:	
+	cmp rcx, 0
+	je end_loop
+
+	mov r9, rcx
+	dec r9
+	
+	mov r8b, [rsi + r9]
+	mov [rdi + r9], r8b
+
+	dec rcx
+	jmp loop_end
 
 end_loop:
 	mov rax, rdi
