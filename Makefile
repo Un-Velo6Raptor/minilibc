@@ -16,6 +16,7 @@ SRC	=	src/my_strlen.S			\
 		src/my_strcasecmp.S		\
 		src/my_rindex.S			\
 		src/my_strstr.S			\
+		src/my_strpbrk.S		\
 		src/my_strchr.S
 
 OBJ	=	$(SRC:.S=.o)
