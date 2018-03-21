@@ -4,6 +4,9 @@
 memmove:
 	xor rcx, rcx
 
+	cmp rdx, 0
+	je end_loop
+	
 	cmp rsi, rdi
 	jbe start_end
 		
