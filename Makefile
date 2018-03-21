@@ -28,7 +28,7 @@ all:		$(NAME)
 		nasm -o $@ $< -f elf64
 
 $(NAME): 	$(OBJ)
-		gcc -shared -o $(NAME) $(OBJ)
+		gcc -shared -static-libgcc -nostdlib -fno-builtin -o $(NAME) $(OBJ)
 
 clean:
 		rm -f $(OBJ)
