@@ -5,10 +5,6 @@ strncmp:
 	xor rcx, rcx
 	xor rax, rax
 
-	cmp rdi, 0
-	je end_loop
-	cmp rsi, 0
-	je end_loop
 	
 loop:
 	cmp rdx, 0
