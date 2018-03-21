@@ -18,6 +18,8 @@ SRC	=	src/my_strlen.S			\
 		src/my_strstr.S			\
 		src/my_strpbrk.S		\
 		src/my_strcspn.S		\
+		src/my_read.S			\
+		src/my_write.S			\
 		src/my_strchr.S
 
 OBJ	=	$(SRC:.S=.o)

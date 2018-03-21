@@ -20,7 +20,6 @@ carry_on_loop:
 	inc rcx
 	jmp loop
 
-
 str_end:
 	mov r8b, [rsi + rcx]
 	cmp BYTE [rdi + rcx], r8b
