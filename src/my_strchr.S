@@ -6,11 +6,11 @@ strchr:
 	xor rax, rax
 
 loop:
-	cmp BYTE [rdi + rcx], 0
-	je end_loop
-
 	cmp BYTE [rdi + rcx], sil
 	je define_ret
+
+	cmp BYTE [rdi + rcx], 0
+	je end_loop
 
 	inc rcx
 	jmp loop

@@ -5,6 +5,11 @@ strstr:
 	xor rcx, rcx
 	xor rax, rax
 
+	cmp BYTE [rdi], 0
+	jne loop
+	cmp BYTE [rsi], 0
+	je define_ret
+	
 loop:
 	cmp BYTE [rdi + rcx], 0
 	je end_loop
